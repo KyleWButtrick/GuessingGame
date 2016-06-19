@@ -2,7 +2,7 @@ public class HowMany {
  
   public static void main(String[] args) {
     
-    Game game = new Game();
+    Game game = new Game(Game.mItemInJar, Game.mMaxNumberInJar);
     Prompter prompter = new Prompter(game);
     
     prompter.guiLine(); prompter.guiLine();
@@ -17,7 +17,7 @@ public class HowMany {
     prompter.youWon();
     prompter.playAgainPrompt();
     game.mCounter = 0;
-    game.randomNumberGen(game.mMaxNumberInJar);
+    game.fill(game.mMaxNumberInJar);
     } 
     
     prompter.thanksForPlaying();

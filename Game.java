@@ -13,17 +13,12 @@ public class Game{
   public static int mCounter = 0;
   public static boolean mPlayAgain = true;
   
-  public String gameSetupItem(String itemType){
-    mItemInJar = itemType;
-    return mItemInJar;
-    }
-  
-  public int gameSetupMaxNumber(int maxNumber){
-    mMaxNumberInJar = maxNumber;
-    return mMaxNumberInJar;
+  public Game(String itemInJar, int maxNumberInJar){
+    mItemInJar = itemInJar;
+    mMaxNumberInJar = maxNumberInJar;
   }
   
-  public int randomNumberGen(int maxNumber){ 
+  public int fill(int maxNumber){ 
     Random random = new Random();
     mRandomNumber = random.nextInt(mMaxNumberInJar + 1);
     if(mRandomNumber == 0){
@@ -32,6 +27,16 @@ public class Game{
     return mRandomNumber;
     
   }
+  public String gameSetupItem(String itemType){
+    mItemInJar = itemType;
+     return mItemInJar;
+  }
+  
+  public int gameSetupMaxNumber(int maxNumber){
+     mMaxNumberInJar = maxNumber;
+     return mMaxNumberInJar;
+  }
+  
    public void play(){
         while(!mGuessedCorrect){
           getGuess();

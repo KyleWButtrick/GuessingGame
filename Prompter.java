@@ -31,11 +31,11 @@ public class Prompter{
       maxNumber = Integer.parseInt(maxNumberString);
       mGame.gameSetupItem(itemType);
       mGame.gameSetupMaxNumber(maxNumber);
-      mGame.randomNumberGen(mGame.mMaxNumberInJar);
+      mGame.fill(mGame.mMaxNumberInJar);
     }
     else{
       System.out.println("Loading Game");
-      mGame.randomNumberGen(mGame.mMaxNumberInJar);
+      mGame.fill(mGame.mMaxNumberInJar);
     }
   }
   
